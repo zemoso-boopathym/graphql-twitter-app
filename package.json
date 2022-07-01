@@ -1,0 +1,19 @@
+{
+  "name": "ecommerceapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.9.0",
+    "graphql": "^16.5.0",
+    "lodash": "^4.17.21",
+    "valid-url": "^1.0.9"
+  }
+}
