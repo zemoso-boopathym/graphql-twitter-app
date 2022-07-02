@@ -77,9 +77,21 @@ const notifications = [
   },
 ];
 
+const userActivity = [
+  {
+    username: 'twitterapi',
+    tweetsRead: {
+      'a416-4cac-ae45-bfaedce1f147-53a0724c': true,
+      '53a0724c-a416-4cac-ae45-bfaedce1f147': true,
+      '4cac-ae45-bfaedce1f147-53a0724c-a416': true,
+    },
+  },
+];
+
 exports.db = {
   tweets,
   users,
   stats,
   notifications,
+  userActivity,
 };

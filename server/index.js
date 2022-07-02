@@ -5,6 +5,7 @@ const { dateScalar } = require('./scalars/dateScalar');
 const { urlScalar } = require('./scalars/urlScalar');
 const { Tweet } = require('./resolvers/Tweet');
 const { Query } = require('./resolvers/Query');
+const { Mutation } = require('./resolvers/Mutation');
 const { Notification } = require('./resolvers/Notification');
 const { db } = require('./db');
 
@@ -14,6 +15,7 @@ const resolvers = {
   Query,
   Tweet,
   Notification,
+  Mutation,
 };
 
 const server = new ApolloServer({

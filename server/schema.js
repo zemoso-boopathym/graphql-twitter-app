@@ -46,4 +46,9 @@ exports.typeDefs = gql`
   type Meta {
     count: Int
   }
+  type Mutation {
+    createTweet(body: String): Tweet
+    deleteTweet(id: ID!): Tweet
+    markTweetRead(id: ID!): Boolean
+  }
 `;

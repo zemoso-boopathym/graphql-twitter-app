@@ -97,4 +97,15 @@
 .send-summary {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.mark-delete {
+  display: flex;
+  gap: 10px;
+}
+
+.dialog-content {
+  color: #000000 !important;
+  opacity: 1;
 }
