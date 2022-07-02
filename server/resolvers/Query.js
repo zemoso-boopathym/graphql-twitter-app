@@ -7,7 +7,7 @@ exports.Query = {
   Tweets: (_parent, { limit, skip, sort_field, sort_order }, { db }) => {
     let tweets = db.tweets;
     skip = skip ?? 0;
-    limit = limit ?? tweets.length - 1;
+    limit = limit ?? tweets.length;
     if (sort_order || sort_field) {
       sort_field = sort_field ?? 'body';
       if (!sort_order || sort_order === 'asc') {
