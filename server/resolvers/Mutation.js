@@ -5,13 +5,16 @@ const validUrl = require('valid-url');
 const jwt = require('jsonwebtoken');
 
 exports.Mutation = {
-  createTweet: (_parent, { body }, { db }) => {
+  createTweet: (_parent, { body }, { db, user }) => {
     const tweetId = uuid();
+    const username = db.loginData.find(
+      (data) => user.email === data.email
+    ).username;
     const newTweet = {
       id: tweetId,
       body,
       date: new Date(),
-      author: 'twitterapi',
+      author: username,
     };
     const newStat = {
       views: 0,

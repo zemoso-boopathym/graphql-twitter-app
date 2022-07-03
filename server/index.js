@@ -7,7 +7,8 @@ const { Tweet } = require('./resolvers/Tweet');
 const { Query } = require('./resolvers/Query');
 const { Mutation } = require('./resolvers/Mutation');
 const { Notification } = require('./resolvers/Notification');
-const { db } = require('./db');
+
+const auth = require('./middleware/auth');
 
 const resolvers = {
   Date: dateScalar,
@@ -21,9 +22,7 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  context: {
-    db,
-  },
+  context: auth,
   csrfPrevention: true,
   cache: 'bounded',
 });

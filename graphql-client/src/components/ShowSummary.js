@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import MarkRead from './MarkRead';
 import DeleteTweet from './DeleteTweet';
+import { AuthContext } from '../context/authContext';
 
 const style = {
   position: 'absolute',
@@ -20,6 +21,7 @@ const style = {
 };
 
 export default function ShowSummary({ tweets, showSummary, setShowSummary }) {
+  const { user } = useContext(AuthContext);
   const handleClose = () => {
     setShowSummary(false);
   };
@@ -81,7 +83,12 @@ export default function ShowSummary({ tweets, showSummary, setShowSummary }) {
             }}
           >
             <MarkRead tweetId={tweets.id} setShowSummary={setShowSummary} />
-            <DeleteTweet tweetId={tweets.id} setShowSummary={setShowSummary} />
+            {tweets.Author.username === user.username && (
+              <DeleteTweet
+                tweetId={tweets.id}
+                setShowSummary={setShowSummary}
+              />
+            )}
           </Typography>
         </Grid>
       </Box>

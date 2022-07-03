@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import moment from 'moment';
 import Button from '@mui/material/Button';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -10,12 +10,14 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
 import { useDeleteTweet } from '../hooks/useDeleteTweet';
 import DeleteTweetConfirmation from './DeleteTweetConfirmation';
+import { AuthContext } from '../context/authContext';
 
 const StyledFeedIcon = styled(FeedIcon)`
   color: #727171;
 `;
 
 export default function Tweets({ tweets }) {
+  const { user } = useContext(AuthContext);
   const [showSummary, setShowSummary] = useState(false);
   const [hover, setHover] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -94,13 +96,15 @@ export default function Tweets({ tweets }) {
                 >
                   <DraftsOutlinedIcon />
                 </IconButton>
-                <IconButton
-                  aria-label='delete'
-                  onClick={() => setShowConfirm(true)}
-                  style={{ visibility: hover ? 'visible' : 'hidden' }}
-                >
-                  <DeleteIcon />
-                </IconButton>
+                {tweets.Author.username === user.username && (
+                  <IconButton
+                    aria-label='delete'
+                    onClick={() => setShowConfirm(true)}
+                    style={{ visibility: hover ? 'visible' : 'hidden' }}
+                  >
+                    <DeleteIcon />
+                  </IconButton>
+                )}
               </div>
             </div>
           </div>
