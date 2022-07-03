@@ -3,7 +3,7 @@ import { Button } from '@mui/material';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 
 import DeleteTweetConfirmation from './DeleteTweetConfirmation';
-import { useDeleteTweet } from '../util/useDeleteTweet';
+import { useDeleteTweet } from '../hooks/useDeleteTweet';
 
 const noop = () => {
   /* default function incase of no functional prop is passed */

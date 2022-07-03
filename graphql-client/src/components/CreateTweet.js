@@ -5,8 +5,8 @@ import SendIcon from '@mui/icons-material/Send';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 
-import { CREATE_TWEET } from '../gql_nodes/createTweet';
-import { GET_TWEETS } from '../gql_nodes/getTweets';
+import { CREATE_TWEET } from '../gql/nodes/createTweet';
+import { GET_TWEETS } from '../gql/nodes/getTweets';
 
 function CreateTweet() {
   const [tweet, setTweet] = useState('');

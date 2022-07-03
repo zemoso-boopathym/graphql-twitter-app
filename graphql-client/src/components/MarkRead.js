@@ -4,7 +4,7 @@ import { useMutation } from '@apollo/client';
 import { Button } from '@mui/material';
 import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
 
-import { READ_TWEET } from '../gql_nodes/markReadTweet';
+import { READ_TWEET } from '../gql/nodes/markReadTweet';
 
 export default function MarkRead({ tweetId, setShowSummary }) {
   const [markReadTweet, { loading, error }] = useMutation(READ_TWEET);

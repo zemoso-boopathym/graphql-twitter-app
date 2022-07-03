@@ -45,7 +45,7 @@ const stats = [
 
 const users = [
   {
-    id: '53a0724c-a416-4cac-ae45',
+    id: '45d54edc-24af-4713-bf8f-b9c718e1d7d0',
     username: 'twitterapi',
     first_name: 'Twitter',
     last_name: 'API',
@@ -61,19 +61,19 @@ const notifications = [
     id: 'asd452-as3df5g-4gfh5',
     date: 'Fri Jul 01 2022 08:10:00 GMT+0530 (India Standard Time)',
     type: 'Like',
-    userId: '53a0724c-a416-4cac-ae45',
+    userId: '45d54edc-24af-4713-bf8f-b9c718e1d7d0',
   },
   {
     id: 'as3df5g-4gfh5-asd452',
     date: 'Fri Jul 01 2022 09:10:00 GMT+0530 (India Standard Time)',
     type: 'Retweet',
-    userId: '53a0724c-a416-4cac-ae45',
+    userId: '45d54edc-24af-4713-bf8f-b9c718e1d7d0',
   },
   {
     id: '4gfh5-asd452-as3df5g',
     date: 'Fri Jul 01 2022 10:10:00 GMT+0530 (India Standard Time)',
     type: 'Response',
-    userId: '53a0724c-a416-4cac-ae45',
+    userId: '45d54edc-24af-4713-bf8f-b9c718e1d7d0',
   },
 ];
 
@@ -88,10 +88,21 @@ const userActivity = [
   },
 ];
 
+const loginData = [
+  {
+    username: 'twitterapi',
+    email: 'twitterapi@test.com',
+    password: '$2a$10$FnDKjvoYRsn1uDiIby2qPuqLDUcSxrT7Mc8qmbGXLMxx4n9Jw5qTm',
+    token:
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMjQwNTkzNzktOTg3Yi00OTE5LTgwNTktZDYwMjJlMjZmN2U2IiwiZW1haWwiOiJ0d2l0dGVyYXBpQHRlc3QuY29tIiwiaWF0IjoxNjU2ODM5NTM1fQ.OiqIjBFwmjwEh94QA_t42qxkul5ATz_oGuFBiq9psxw',
+  },
+];
+
 exports.db = {
   tweets,
   users,
   stats,
   notifications,
   userActivity,
+  loginData,
 };

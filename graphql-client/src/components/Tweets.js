@@ -8,7 +8,7 @@ import ShowSummary from './ShowSummary';
 import { IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import DraftsOutlinedIcon from '@mui/icons-material/DraftsOutlined';
-import { useDeleteTweet } from '../util/useDeleteTweet';
+import { useDeleteTweet } from '../hooks/useDeleteTweet';
 import DeleteTweetConfirmation from './DeleteTweetConfirmation';
 
 const StyledFeedIcon = styled(FeedIcon)`

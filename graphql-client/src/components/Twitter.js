@@ -5,7 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import styled from 'styled-components';
 
 import CreateTweet from './CreateTweet';
-import { GET_TWEETS } from '../gql_nodes/getTweets';
+import { GET_TWEETS } from '../gql/nodes/getTweets';
 import Tweets from './Tweets';
 
 const StyledButton = styled(Button)`

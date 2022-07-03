@@ -31,6 +31,12 @@ exports.typeDefs = gql`
     full_name: String
     name: String @deprecated
     avatar_url: Url
+    Login: Login
+  }
+  type Login {
+    email: String
+    password: String
+    token: String
   }
   type Stat {
     views: Int!
@@ -46,9 +52,24 @@ exports.typeDefs = gql`
   type Meta {
     count: Int
   }
+  input RegisterInput {
+    username: String
+    first_name: String
+    last_name: String
+    email: String
+    password: String
+    confirmPassword: String
+    avatar_url: Url
+  }
+  input LoginInput {
+    email: String
+    password: String
+  }
   type Mutation {
     createTweet(body: String): Tweet
     deleteTweet(id: ID!): Tweet
     markTweetRead(id: ID!): Boolean
+    registerUser(registerInput: RegisterInput): User
+    loginUser(loginInput: LoginInput): User
   }
 `;
