@@ -21,8 +21,9 @@ exports.Query = {
   User: (_parent, { id }, { db }) => {
     return db.users.find((user) => id === user.id);
   },
-  Notifications: (_parent, _args, { db }) => {
-    return db.notifications;
+  Notifications: (_parent, { limit }, { db }) => {
+    limit = limit ?? db.notifications.length;
+    return db.notifications.slice(0, limit);
   },
   TweetsMeta: (_parent, _args, { db }) => {
     return {

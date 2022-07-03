@@ -16,8 +16,12 @@ if (storedToken) {
 
 const AuthContext = createContext({
   user: null,
-  login: (userData) => {},
-  logout: () => {},
+  login: (_) => {
+    /* Initializing Auth Context login function */
+  },
+  logout: () => {
+    /* Initializing Auth Context logout function */
+  },
 });
 
 function authReducer(state, action) {
