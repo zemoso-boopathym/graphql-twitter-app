@@ -5,6 +5,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import { Button } from '@mui/material';
+import { messages } from '../util/messages';
 
 const noop = () => {
   /* default function incase of no functional prop is passed */
@@ -30,7 +31,7 @@ export default function DeleteTweetConfirmation({
           id='alert-dialog-description'
           className='dialog-content'
         >
-          Are you sure you want to delete this tweet?
+          {messages.DELETE_CONFIRMATION_MESSAGE}
         </DialogContentText>
       </DialogContent>
       <DialogActions>

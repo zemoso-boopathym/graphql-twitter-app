@@ -1,5 +1,4 @@
 const { ApolloServer } = require('apollo-server');
-const { isEqual } = require('lodash');
 
 const { typeDefs } = require('../schema');
 const { dateScalar } = require('../scalars/dateScalar');
@@ -8,7 +7,6 @@ const { Tweet } = require('../resolvers/Tweet');
 const { Query } = require('../resolvers/Query');
 const { Mutation } = require('../resolvers/Mutation');
 const { Notification } = require('../resolvers/Notification');
-const auth = require('../middleware/auth');
 const { db } = require('../db');
 
 const resolvers = {
